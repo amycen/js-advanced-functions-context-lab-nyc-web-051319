@@ -46,7 +46,7 @@ let createTimeOutEvent = function (dateStamp) {
 let hoursWorkedOnDate = function (dateString) {
   const timeInHour = this.timeInEvents.find(e => e.date === dateString).hour
   const timeOutHour = this.timeOutEvents.find(e => e.date === dateString).hour
-  return (timeOutHour - timeInHour) / 1000
+  return (timeOutHour - timeInHour) / 100
 }
 
 let allWagesFor = function () {
