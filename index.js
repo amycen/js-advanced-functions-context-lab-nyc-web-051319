@@ -70,6 +70,8 @@ let calculatePayroll = function (employees) {
     accum + allWagesFor.call(employee), 0)
 }
 
-let findEmployeebyFirstName = function (srcArray, firstName) {
-  return srcArray.find(employee => employee.firstName === firstName)
+let findEmployeebyFirstName = function(srcArray, firstName) {
+  return srcArray.find(function(rec){
+    return rec.firstName === firstName
+  })
 }
