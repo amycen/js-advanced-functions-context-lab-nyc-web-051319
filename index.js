@@ -67,8 +67,8 @@ let allWagesFor = function () {
 
 let calculatePayroll = function (employees) {
   return employees.reduce(function (accum, employee) {
-    accum + employee.allWagesFor
-  }
+    accum + employee.allWagesFor()
+  }, 0)
 }
 
 let findEmployeebyFirstName = function (srcArray, firstName) {
