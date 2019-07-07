@@ -67,7 +67,7 @@ let allWagesFor = function () {
 
 let calculatePayroll = function (employees) {
   return employees.reduce(function (accum, employee) {
-    accum + employee.allWagesFor()
+    accum + allWagesFor.call(this)
   }, 0)
 }
 
