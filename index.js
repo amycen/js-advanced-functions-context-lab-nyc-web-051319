@@ -19,6 +19,10 @@ let createEmployeeRecord = function (personArr) {
   }
 }
 
+let createEmployees = function(arrays){
+  return arrays.map(x => createEmployeeRecord(x))
+}
+
 let allWagesFor = function () {
     let eligibleDates = this.timeInEvents.map(function (e) {
         return e.date
