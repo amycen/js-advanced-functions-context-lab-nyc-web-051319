@@ -23,6 +23,15 @@ let createEmployees = function(arrays){
   return arrays.map(x => createEmployeeRecord(x))
 }
 
+let createTimeInEvent = function (dateStamp) {
+  const [dateString, hours] = dateStamp.split(" ")
+  this.timeInEvents.push({
+    type: "TimeIn",
+    hour: hours,
+    date: dateString
+  })
+}
+
 let allWagesFor = function () {
     let eligibleDates = this.timeInEvents.map(function (e) {
         return e.date
