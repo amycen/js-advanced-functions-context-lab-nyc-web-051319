@@ -27,7 +27,7 @@ let createTimeInEvent = function (dateStamp) {
   const [dateString, hours] = dateStamp.split(" ")
   this.timeInEvents.push({
     type: "TimeIn",
-    hour: hours,
+    hour: parseInt(hours),
     date: dateString
   })
   return this
@@ -37,7 +37,7 @@ let createTimeOutEvent = function (dateStamp) {
   const [dateString, hours] = dateStamp.split(" ")
   this.timeOutEvents.push({
     type: "TimeOut",
-    hour: hours,
+    hour: parseInt(hours),
     date: dateString
   })
   return this
