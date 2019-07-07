@@ -35,13 +35,15 @@ let createTimeInEvent = function (dateStamp) {
 
 let createTimeOutEvent = function (dateStamp) {
   const [dateString, hours] = dateStamp.split(" ")
-  this.timeInEvents.push({
+  this.timeOutEvents.push({
     type: "TimeOut",
     hour: hours,
     date: dateString
   })
   return this
 }
+
+
 
 let allWagesFor = function () {
     let eligibleDates = this.timeInEvents.map(function (e) {
